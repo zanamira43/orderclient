@@ -1,0 +1,25 @@
+{
+  "name": "orderclient",
+  "version": "1.0.0",
+  "description": "build frontend app for order by using nuxtjs",
+  "author": "zanamira43",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/moment": "^1.6.1",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "material-design-icons-iconfont": "^5.0.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.0.0"
+  }
+}
