@@ -60,7 +60,7 @@ export default {
     },
     manifest: {
       name: 'Order Pvc && Aluminum Client Application',
-      short_name: 'Order Client App',
+      short_name: 'Order App',
       lang: 'en',
     },
   },
