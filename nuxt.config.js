@@ -53,6 +53,17 @@ export default {
     '@nuxtjs/moment',
     '@nuxtjs/auth'
   ],
+  pwa: {
+    meta: {
+      title: 'Harem Pvc OrderApp',
+      author: 'Z.Mira',
+    },
+    manifest: {
+      name: 'Order Pvc && Aluminum Client Application',
+      short_name: 'Order Client App',
+      lang: 'en',
+    },
+  },
   moment:{
     timezone: true
   },
