@@ -79,7 +79,7 @@ export default {
   axios: {
     // baseURL: 'http://localhost:8000/api/',
     // baseURL: 'http://192.168.1.12:8000/api/',
-    baseURL: 'http://18.184.87.117/api/',
+    baseURL: 'http://ec2-18-184-87-117.eu-central-1.compute.amazonaws.com/api/',
 
   },
   /*
