@@ -62,7 +62,6 @@ export default {
       name: 'Order Pvc && Aluminum Client Application',
       short_name: 'Order App',
       start_url: '/',
-      themeColor: '#202225',
       lang: 'en',
     },
   },
