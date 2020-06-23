@@ -2,10 +2,10 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   mode: 'universal',
-  server: {
-    host: '0.0.0.0',
-    port: 8083
-  },
+  // server: {
+  //   host: '0.0.0.0',
+  //   port: 8083
+  // },
   /*
   ** Headers of the page
   */
