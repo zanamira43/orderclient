@@ -19,7 +19,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: './static/favicon.ico' },
     ]
   },
   /*
@@ -53,6 +53,9 @@ export default {
     '@nuxtjs/moment',
     '@nuxtjs/auth'
   ],
+  icon:{
+    iconSrc: './static/icon.png'
+  },
   pwa: {
     meta: {
       title: 'Harem Pvc OrderApp',
@@ -61,6 +64,8 @@ export default {
     manifest: {
       name: 'Order Pvc && Aluminum Client Application',
       short_name: 'Order App',
+      start_url: '/',
+      themeColor: '#202225',
       lang: 'en',
     },
   },
