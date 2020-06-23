@@ -19,7 +19,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: './static/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
     ]
   },
   /*
@@ -53,9 +53,6 @@ export default {
     '@nuxtjs/moment',
     '@nuxtjs/auth'
   ],
-  icon:{
-    iconSrc: './static/icon.png'
-  },
   pwa: {
     meta: {
       title: 'Harem Pvc OrderApp',
