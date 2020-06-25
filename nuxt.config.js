@@ -2,10 +2,10 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   mode: 'universal',
-  // server: {
-  //   host: '0.0.0.0',
-  //   port: 8083
-  // },
+  server: {
+    host: '0.0.0.0',
+    port: 8083
+  },
   /*
   ** Headers of the page
   */
@@ -75,7 +75,7 @@ export default {
   axios: {
     // baseURL: 'http://localhost:8000/api/',
     // baseURL: 'http://192.168.1.12:8000/api/',
-    baseURL: 'http://ec2-18-184-87-117.eu-central-1.compute.amazonaws.com/api/',
+    baseURL: 'https://hpvcapi.harempvc.tk/api/',
 
   },
   /*
