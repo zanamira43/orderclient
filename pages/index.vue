@@ -144,6 +144,10 @@
 
 export default {
   components: {},
+
+  beforeMount() {
+     this.$store.dispatch('orders/getAllOrdres')
+  },
   
   data(){
     return {
