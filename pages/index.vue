@@ -6,7 +6,7 @@
             <v-card flat class="border">
               <!-- loading item image here -->
               <a :href="item.image" download v-if="item.image">
-                <v-img  :src="item.image" :lazy-src="item.image" 
+                <v-img  :src="item.image" 
                   height="300" width="100%"  aspect-ratio="1">
                       <template v-slot:placeholder>
                       <v-row
@@ -146,7 +146,9 @@ export default {
   components: {},
 
   beforeMount() {
-     this.$store.dispatch('orders/getAllOrdres')
+    this.$store.dispatch('orders/getAllOrdres')
+    this.$store.dispatch('carts/getAllCarts')
+    this.$store.dispatch('transfer/fetchAllTransfer')
   },
   
   data(){
@@ -166,9 +168,9 @@ export default {
   },
   async fetch({store}){
     try {
-      await store.dispatch('orders/getAllOrdres')
-      await store.dispatch('carts/getAllCarts')
-      await store.dispatch('transfer/fetchAllTransfer')
+      // await store.dispatch('orders/getAllOrdres')
+      // await store.dispatch('carts/getAllCarts')
+      // await store.dispatch('transfer/fetchAllTransfer')
     }catch(e){
       console.log(e)
     }
