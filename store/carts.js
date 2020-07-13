@@ -42,7 +42,6 @@ export const mutations  = {
           "total": py.quantity * py.price,
           "rtotal": py.rquantity * py.price,
           "image": py.image,
-          "slug": py.slug,
           "updated": py.updated,
           "received": py.received
         }
@@ -65,11 +64,11 @@ export const actions = {
   // add to cart
   async addItemtoCart(context, item){
     item.accepted = true
-    await this.$axios.put(`/orders/accepted/${item.slug}`, item)
+    await this.$axios.put(`/orders/accepted/${item.id}`, item)
   },
   async removeFromCard(context, cart){
     cart.accepted = false
-    await this.$axios.put(`/orders/accepted/${cart.slug}`, cart)
+    await this.$axios.put(`/orders/accepted/${cart.id}`, cart)
   },
 
 
@@ -77,15 +76,15 @@ export const actions = {
   async changeCartReceived({commit}, cart){
     if(cart.received){
       cart.received = true
-      await this.$axios.put(`/orders/received/${cart.slug}`, cart)
+      await this.$axios.put(`/orders/received/${cart.id}`, cart)
     }else{
       cart.received = false
-      await this.$axios.put(`/orders/received/${cart.slug}`, cart)
+      await this.$axios.put(`/orders/received/${cart.id}`, cart)
     }
   },
   
   // update cart recieved quantity
   async updateCartQuantity({commit}, cart){
-    await this.$axios.put(`/orders/detail/${cart.slug}/`, cart)
+    await this.$axios.put(`/orders/detail/${cart.id}/`, cart)
   }
 }

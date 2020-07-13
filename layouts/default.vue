@@ -3,11 +3,13 @@
     <!-- Navbar -->
     <Navbar />
 
-    <v-content>
+    <!-- <v-content> -->
+    <v-main>
       <v-container>
         <nuxt />
       </v-container>
-    </v-content>
+    </v-main>
+    <!-- </v-content> -->
    
    <!-- Footer -->
    <Footer />

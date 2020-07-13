@@ -1,11 +1,18 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  
+  target: 'static',
   mode: 'universal',
+  components: true,
+
+  
   server: {
-    // host: '0.0.0.0',
+    host: '0.0.0.0',
     port: 8083
   },
+
+  
   /*
   ** Headers of the page
   */

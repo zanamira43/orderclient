@@ -5,7 +5,6 @@
       <!-- side bar icon -->
       <v-app-bar-nav-icon 
       color="red" 
-      class="hidden-sm-and-up"
       @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
 

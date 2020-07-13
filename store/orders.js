@@ -41,11 +41,11 @@ export const actions = {
       'price': item.price,
       'description': item.description
     }
-   await this.$axios.put(`/orders/detail/${item.slug}/`, newItem)
+   await this.$axios.put(`/orders/detail/${item.id}/`, newItem)
    
   },
 
-  async deleteOrder({commit}, slug){
-    await this.$axios.delete(`/orders/detail/${slug}`)
+  async deleteOrder({commit}, id){
+    await this.$axios.delete(`/orders/detail/${id}`)
   },
 }

@@ -128,7 +128,7 @@
               
             </v-card-title>
             <v-card-actions>
-              <v-btn icon><v-icon class="red--text" @click="deleteOrder(deleteInfo.slug)">mdi-trash-can-outline</v-icon></v-btn>
+              <v-btn icon><v-icon class="red--text" @click="deleteOrder(deleteInfo.id)">mdi-trash-can-outline</v-icon></v-btn>
               <v-btn icon><v-icon class="red--text" @click="delOrderdialog = false">mdi-close</v-icon></v-btn>
             </v-card-actions>
           </v-card>
@@ -145,11 +145,11 @@
 export default {
   components: {},
 
-  beforeMount() {
-    this.$store.dispatch('orders/getAllOrdres')
-    this.$store.dispatch('carts/getAllCarts')
-    this.$store.dispatch('transfer/fetchAllTransfer')
-  },
+  // beforeMount(){
+  //   this.$store.dispatch('orders/getAllOrdres')
+  //   this.$store.dispatch('carts/getAllCarts')
+  //   this.$store.dispatch('transfer/fetchAllTransfer')
+  // },
   
   data(){
     return {
@@ -166,11 +166,11 @@ export default {
       return this.$store.state.orders.items
     }
   },
-  async fetch({store}){
+  async asyncData({store}){
     try {
-      // await store.dispatch('orders/getAllOrdres')
-      // await store.dispatch('carts/getAllCarts')
-      // await store.dispatch('transfer/fetchAllTransfer')
+      await store.dispatch('orders/getAllOrdres')
+      await store.dispatch('carts/getAllCarts')
+      await store.dispatch('transfer/fetchAllTransfer')
     }catch(e){
       console.log(e)
     }
@@ -210,10 +210,10 @@ export default {
       this.delOrderdialog = true
       this.deleteInfo = item
     },
-    async deleteOrder(slug){
+    async deleteOrder(id){
       try{
           // await this.$axios.delete(`/orders/detail/${id}`)
-          await this.$store.dispatch('orders/deleteOrder', slug)
+          await this.$store.dispatch('orders/deleteOrder', id)
           this.delOrderdialog = false
           await this.$store.dispatch('orders/getAllOrdres')
           await this.$store.commit('snackbar/setSnack', 'Order Deleted Successfully')
