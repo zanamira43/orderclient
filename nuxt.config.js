@@ -1,18 +1,18 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  
-  target: 'static',
+
+  target: 'server',
   mode: 'universal',
   components: true,
 
-  
+
   server: {
-    host: '0.0.0.0',
+    // host: '0.0.0.0',
     port: 8083
   },
 
-  
+
   /*
   ** Headers of the page
   */
@@ -80,9 +80,9 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    // baseURL: 'http://localhost:8000/api/',
+    baseURL: 'http://localhost:8000/api/',
     // baseURL: 'http://192.168.1.12:8000/api/',
-    baseURL: 'https://hpvcapi.harempvc.tk/api/',
+    // baseURL: 'https://hpvcapi.harempvc.tk/api/',
 
   },
   /*
